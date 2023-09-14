@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <>
-      <h1 style={{ textAlign: 'center' }}>Random Color Generator</h1>
+      <h1 style={{ textAlign: 'center' }}>React Color Generator</h1>
       <div style={containerStyle}>Generated Color: {color}</div>
       <button style={buttonStyle} onClick={() => setColor(randomColor)}>
         Generate
