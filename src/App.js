@@ -6,20 +6,34 @@ export default function App() {
   const [color, setColor] = useState(randomColor);
   const ranCol = randomColor();
 
+  const containerStyle = {
+    backgroundColor: ranCol,
+    fonstSize: '50px',
+    padding: '24px',
+    textAlign: 'center',
+    borderRadius: '8px',
+    boxShadow: '0 0 10px rgba(0, 0, 0.2)',
+    color: 'white',
+  };
+
+  const buttonStyle = {
+    backgroundColor: 'grey',
+    color: 'white',
+    border: 'none',
+    padding: '10px 20px',
+    fontSize: '20px',
+    borderRadius: '4px',
+    cursor: 'pointer',
+    marginLeft: '10px',
+  };
+
   return (
     <>
-      <h1>Random Color Generator</h1>
-
-      <div
-        style={{
-          backgroundColor: ranCol, // Set the background color
-          fontSize: '50px',
-          padding: '24px',
-        }}
-      >
-        Generated Color: {color}
-      </div>
-      <button onClick={() => setColor(randomColor())}>Generate</button>
+      <h1 style={{ textAlign: 'center' }}>Random Color Generator</h1>
+      <div style={containerStyle}>Generated Color: {color}</div>
+      <button style={buttonStyle} onClick={() => setColor(randomColor)}>
+        Generate
+      </button>
     </>
   );
 }
