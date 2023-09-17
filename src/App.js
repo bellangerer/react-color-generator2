@@ -8,7 +8,7 @@ export default function App() {
 
   const containerStyle = {
     backgroundColor: ranCol,
-    fonstSize: '50px',
+    fontSize: '50px',
     padding: '24px',
     textAlign: 'center',
     borderRadius: '8px',
@@ -25,6 +25,10 @@ export default function App() {
     borderRadius: '4px',
     cursor: 'pointer',
     marginLeft: '10px',
+  };
+
+  const generateRandomColor = () => {
+    setColor(randomColor());
   };
 
   return (
